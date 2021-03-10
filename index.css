@@ -160,31 +160,32 @@ body {
   height: 100%;
   width: 100%;
   background: var(--progress-bar-color);
-  clip: rect(0px, 100px, 100px, 18px);
   border-radius: 100%;
 }
 
 .pwa__progress-value {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 51%;
+  left: 51%;
   transform: translate(-50%, -50%);
   z-index: 11;
-  font-size: 11px;
+  text-align: center;
+  font-size: 10px;
   color: var(--progress-bar-color);
-  font-weight: 800;
+  font-weight: bold;
+  margin-top: 1px;
 }
 
 .pwa__progress--75 {
-  clip: rect(0px, 100px, 100px, 5px);
+  clip: rect(0px, 100px, 100px, 10px);
 }
 
 .pwa__progress--50 {
-  clip: rect(0px, 100px, 100px, 18px);
+    clip: rect(0, 100px, 100px, 20px);
 }
 
 .pwa__progress--20 {
-  clip: rect(0px, 100px, 100px, 25px);
+    clip: rect(0px, 100px, 20px, 20px);
   background: red;
 }
 
