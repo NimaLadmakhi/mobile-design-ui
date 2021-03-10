@@ -1,0 +1,215 @@
+:root {
+  --white-color: #fff;
+  --bg-light: #f3f5fa;
+  --bg-dark: #1c2238;
+  --font-xsm: 13px;
+  --font-sm: 16.5px;
+  --font-lg: 25px;
+  --tab-color: rgba(28, 34, 56, 0.5);
+  --active-tab-color: rgba(28, 34, 56, 1);
+  --border-todo-app: rgba(243, 245, 250, 0);
+  --progress-bar-color: #5748cb;
+  --number-todo-color: #613be7;
+  --font-xsm: 10px;
+  --width-mobile: 360px;
+  --height-mobile: 640px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: 'Poppins';
+  overflow: hidden;
+}
+
+.pwa {
+  overflow: hidden scroll;
+  height: var(--height-mobile);
+  width: var(--width-mobile);
+  background-color: var(--white-color);
+}
+
+.pwa__header {
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 2px solid var(--bg-light);
+  font-size: 14px;
+}
+
+.pwa__title {
+  color: var(--bg-dark);
+  font-size: var(--font-lg);
+  margin: 20px 0;
+  font-weight: 500;
+  line-height: 35px;
+}
+
+
+.pwa__body {
+  background: var(--bg-light);
+  padding: 20px 0 30px 0;
+}
+
+.pwa__tabbar {
+  list-style-type: none;
+  width: 100%;
+  text-align: center;
+  background: var(--white-color);
+  margin: auto;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+.pwa__tabbar li:first-child {
+  padding-right: 10px;
+  border-right: 1px solid var(--tab-color);
+}
+
+.pwa__tabbar li:last-child {
+  border-left: 1px solid var(--tab-color);
+  padding-left: 10px;
+}
+
+.pwa__tabbar li a {
+  font-size: 14px;
+  color: var(--tab-color);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.pwa__tabbar li a.active {
+  color: var(--active-tab-color);
+  font-weight: 800;
+}
+
+.pwa__status {
+  padding: 30px 0;
+}
+
+.pwa__section {
+  font-size: var(--font-sm);
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.pwa__number {
+ font-size: var(--font-xsm);
+ color: var(--number-todo-color);
+ font-weight: 500;
+ margin: 5px 0 0 5px; 
+}
+
+.pwa__cards {
+  background: var(--white-color);
+}
+
+.pwa__card {
+  padding: 15px;
+  border-bottom: 0.5px solid rgba(243, 245, 250, 0);
+}
+
+.pwa__card:last-child {
+  border: unset;
+}
+
+.pwa__user {
+  width: 50px;
+  border-radius: 10px;
+}
+
+.pwa__username {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--active-tab-color);
+}
+
+.pwa__time {
+  font-size: 11px;
+  color: var(--tab-color);
+}
+
+.pwa__progress {
+  position: relative;
+  height: 40px;
+  width: 40px;
+}
+
+.pwa__progress-circle {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  background: #fff;
+}
+
+.pwa__progress-bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: var(--progress-bar-color);
+  clip: rect(0px, 100px, 100px, 18px);
+  border-radius: 100%;
+}
+
+.pwa__progress-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  font-size: 11px;
+  color: var(--progress-bar-color);
+  font-weight: 800;
+}
+
+.pwa__progress--75 {
+  clip: rect(0px, 100px, 100px, 5px);
+}
+
+.pwa__progress--50 {
+  clip: rect(0px, 100px, 100px, 18px);
+}
+
+.pwa__progress--20 {
+  clip: rect(0px, 100px, 100px, 25px);
+  background: red;
+}
+
+.pwa__progress--20 ~ .pwa__progress-value {
+  color: red;
+}
+
+.pwa__progress--100 {
+  clip: rect(0px, 100px, 100px, 0);
+  background: green;
+}
+
+.pwa__progress--100 ~ .pwa__progress-value{
+  font-size: 15px;
+  color: green;
+}
+
+
+@media(min-width:361px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-dark);
+  }
+}

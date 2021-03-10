@@ -1,0 +1,24 @@
+IMAGE FOLDER CONTAINS THE USERS
+
+light #f3f5fa
+
+sm title 16px
+
+dark #1c2238
+
+xl title 25px
+
+tab color rgba(28, 34, 56, 0.5)
+active tab color rgba(28, 34, 56, 1)
+
+border todoapp 243,245,250,0
+
+
+image todoapp width 40px and borderadius 10px
+
+progressBar 40px 
+
+color #5748cb fontsize 10px
+
+            <i class="fa fa-chevron-left"></i>
+            <i class="fa fa-list-alt"></i> &nbsp;
